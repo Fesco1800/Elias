@@ -17,11 +17,25 @@ The Alias Management feature simplifies the organization and control of generate
 
 ## Browser Extension ##
 
-Download the extension folder from: [client/Elias]
-Open Google Chrome and go to: chrome://extensions
-Enable Developer Mode by toggling the switch at the top right corner.
-Click on "Load unpacked" and select the Elias extension folder you downloaded.
-The Elias Browser Extension is now installed and ready to use!
+<div class="col-4">
+            <div class="text-center" style="margin-top: 30px; font-size: 45px; "><img src="../assets/icons/bulb.png" alt="Repeat">
+                    </div>
+            <div class="media-body pb-3 mb-0 small lh-125 text-justify">
+            <p style="margin-top: 13px;">
+                        <strong class="d-block text-gray-dark text-center">To install the Elias Browser Extension:</strong>
+                      </p>
+                      <ol>
+                        <li>Download the extension folder from this Google Drive link: <a href="#" target="_blank">[Insert your Google Drive link here]</a></li>
+                        <li>Open Google Chrome and go to: <code>chrome://extensions</code></li>
+                        <li>Enable Developer Mode by toggling the switch at the top right corner.</li>
+                        <li>Click on "Load unpacked" and select the Elias extension folder you downloaded.</li>
+                        <li>The Elias Browser Extension is now installed and ready to use!</li>
+                      </ol>
+                      <p style="margin-left: 25px;">
+                        &#8594; Take control of your online identity with Elias and experience the convenience and security of alias management.
+                      </p>
+            </div>
+        </div>
 
 > Highly Secure PHP Authentication System with Login, Signup, User Profiles, Profile Editing, Account Verification via Email, Password Reset System, Remember Me Feature, Automatic Logout on Inactivity,  Global ERROR & STATUS variable system, Authentication checks and more.
 
