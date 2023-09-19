@@ -2,7 +2,7 @@
 [Download eliasdb.sql](/eliasdb.sql)
 
 <p align="center">
-  <img src="assets/images/eliaslogo1.png width="350" align="center"/>
+  <img src="assets/images/eliaslogo1.png" width="350" align="center"/>
 </p><br>
 
 > Embeddable and Highly Secure PHP Authentication System with Login, Signup, User Profiles, Profile Editing, Account Verification via Email, Password Reset System, Remember Me Feature, Automatic Logout on Inactivity,  Global ERROR & STATUS variable system, Authentication checks and more.
