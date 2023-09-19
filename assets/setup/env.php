@@ -14,7 +14,7 @@ if (!defined('DB_PASSWORD'))                    define('DB_PASSWORD' ,'');
 if (!defined('DB_PORT'))                        define('DB_PORT' ,'');
 
 if (!defined('MAIL_HOST'))                      define('MAIL_HOST', 'smtp.gmail.com');
-if (!defined('MAIL_USERNAME'))                  define('MAIL_USERNAME', 'eliasmain2023@gmail.com');
-if (!defined('MAIL_PASSWORD'))                  define('MAIL_PASSWORD', 'vcllckeyggspstvf');
+if (!defined('MAIL_USERNAME'))                  define('MAIL_USERNAME', 'example');
+if (!defined('MAIL_PASSWORD'))                  define('MAIL_PASSWORD', 'example');
 if (!defined('MAIL_ENCRYPTION'))                define('MAIL_ENCRYPTION', 'ssl');
 if (!defined('MAIL_PORT'))                      define('MAIL_PORT', 465);
