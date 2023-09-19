@@ -25,7 +25,7 @@ The Alias Management feature simplifies the organization and control of generate
                         <strong class="d-block text-gray-dark text-center">To install the Elias Browser Extension:</strong>
                       </p>
                       <ol>
-                        <li>Download the extension folder from this Google Drive link: <a href="#" target="_blank">[Insert your Google Drive link here]</a></li>
+                        <li>Download the extension folder from client/Elias</li>
                         <li>Open Google Chrome and go to: <code>chrome://extensions</code></li>
                         <li>Enable Developer Mode by toggling the switch at the top right corner.</li>
                         <li>Click on "Load unpacked" and select the Elias extension folder you downloaded.</li>
