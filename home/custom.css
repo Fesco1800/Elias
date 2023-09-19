@@ -4,6 +4,7 @@ body {
     /* Prevent scroll on narrow devices */
 }
 
+
 .text-white-50 {
     color: rgba(255, 255, 255, .5);
 }
@@ -14,4 +15,9 @@ body {
 
 .border-bottom {
     border-bottom: 1px solid #e5e5e5;
+}
+
+.scrollable-div {
+  max-height: 1000px; /* Adjust the height as needed */
+ 
 }

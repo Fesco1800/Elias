@@ -1,0 +1,36 @@
+Upload project to GitHub:
+
+Open Git Bash
+cd <project_name>
+
+
+Francisco Esco@Moriarty MINGW64 /c/xampp/htdocs/Elias (main)
+$ git init
+Initialized empty Git repository in C:/xampp/htdocs/Elias/.git/
+
+Francisco Esco@Moriarty MINGW64 /c/xampp/htdocs/Elias (master)
+$ git branch -m main
+
+Francisco Esco@Moriarty MINGW64 /c/xampp/htdocs/Elias (main)
+$ git add .
+
+Francisco Esco@Moriarty MINGW64 /c/xampp/htdocs/Elias (main)
+$ git commit -m "Initial Commit"
+[main (root-commit) cc09c71] Initial Commit
+ 1799 files changed, 169948 insertions(+)
+
+Francisco Esco@Moriarty MINGW64 /c/xampp/htdocs/Elias (main)
+$ git remote add origin https://github.com/Fesco1800/Elias.git
+
+Francisco Esco@Moriarty MINGW64 /c/xampp/htdocs/Elias (main)
+$ git push -u origin main
+Enumerating objects: 1838, done.
+Counting objects: 100% (1838/1838), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (1830/1830), done.
+Writing objects: 100% (1838/1838), 5.47 MiB | 909.00 KiB/s, done.
+Total 1838 (delta 107), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (107/107), done.
+To https://github.com/Fesco1800/Elias.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.

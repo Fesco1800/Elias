@@ -1,0 +1,143 @@
+<head>
+<link rel="stylesheet" type="text/css" href="css/aliasing.css">
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="js/jquery-3.6.4.js"></script>
+</head>
+<body style="background: #212529">
+
+<div class="my-3 p-3 rounded box-shadow" id="extdiv" style="background: #0d1117;">
+        <div id="booking" class="section">
+          <div class="section-center">
+            <div class="container col-10" style="background: #161b22;">
+              <h4 class="my-3" id="" style="color: #fff;"><i class="bi bi-arrow-repeat"></i> Your Alias
+                <button type="button" class="btn btn-secondary" id="gotobtn"> 
+                  <a href="manage.html" style="color: #fff; text-decoration: none;">
+                    Manage Aliases 
+                    <i class="bi bi-arrow-left"></i>    
+                  </a>
+                </button>
+              </h4>
+              <div class="row">
+
+                <div class="booking-form">
+                  <h4 id="title" style="color: #fff; text-align: center;"></h4>
+                  <div class="row">
+                    
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <!-- <form action="./controllers/aliasingController.php" method="post" style="color: #fff;"> -->
+                          <input type="number" value="1" name="num_aliases" id="num_aliases" min="1" max="1" required style="display: none;">
+
+                          <span class="form-label" for="re-username">Username:</span>
+                          <input class="form-control" type="text" name="re-username" id="re-username" placeholder="Username" value="" required style="padding: 2px;">
+                          
+
+                            <div class="form-group" style="float: left; display: none;">
+                              <div class="form-checkbox">
+                                <label for="roundtrip">
+                                  <input type="radio" id="roundtrip" name="flight-type" >
+                                  <span></span>With space
+                                </label>
+                                <label for="one-way">
+                                  <input type="radio" id="one-way" name="flight-type">
+                                  <span></span>Without space
+                                </label>
+                              </div>
+                            </div>
+                        <!-- </form> -->
+
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <span class="form-label">Email</span>
+                        <input class="form-control" type="text" name="email" id="re-email" value="" placeholder="Email" required style="padding: 2px;">
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <span class="form-label">Phone</span>
+                        <input class="form-control" type="text" name="phone" id="re-phone" value="" placeholder="Phone" required style="padding: 2px;">
+                  
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <span class="form-label">Password</span>
+                      <div class="form-group" style="display: flex;">
+                        <div style="position: relative; flex-grow: 1;">
+                          <input class="form-control" type="password" name="password" placeholder="Password" id="re-password-input" required style="padding: 2px;">
+                          <button class="btn btn-primary btn-sm" title="click to view password" id="togglePasswordBtn" style="position: absolute; top: 40%; right: 10px; transform: translateY(-50%); border-radius: 6px; font-size: 20px; background: none; border: none;  ">
+                            <i class="bi bi-eye" id="togglePasswordIcon" style="color: #e6edf3;"></i>
+                          </button>
+                        </div>
+                       
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <span class="form-label">Firstname</span>
+                        <input class="form-control" type="text" placeholder="Firstname" id="re-firstname" value="" required style="padding: 2px;">
+                        
+                      </div>
+                  </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <span class="form-label">Middlename</span>
+                        <input class="form-control" type="text" placeholder="Middlename" id="re-middlename" required style="padding: 2px;">
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <span class="form-label">Lastname</span>
+                        <input class="form-control" type="text" placeholder="Lastname" id="re-lastname" value="" required style="padding: 2px;">
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <span class="form-label">Birthdate</span>
+                        <input class="form-control" type="date" id="re-birthdate" required style="padding: 2px;">
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <span class="form-label">Address</span>
+                        <input class="form-control" type="text" placeholder="Address" id="re-address" required style="padding: 2px;">
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <span class="form-label">URL</span>
+                        <input class="form-control" type="text" placeholder="URL" id="re-url" required style="padding: 2px;"> 
+                                              </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="form-btn">
+                        <button class="submit-btn" id="re-autofill" style="float: right;"><i class="bi bi-pen"></i> Autofill</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+
+
+<script src="js/redirectForm.js"></script>
+
+</body>

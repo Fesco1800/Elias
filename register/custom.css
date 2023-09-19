@@ -1,3 +1,26 @@
 textarea {
     min-height: 150px;
 }
+
+#signUpBtn {
+    background: rgba(111, 66, 193, 0.75) !important;
+    border-color: rgba(111, 66, 193, 1);
+    font-size: 14px;
+    border-radius: 2px;
+}
+
+
+#signUpBtn:hover {
+    background: rgba(111, 66, 193, 1) !important;
+    border-color: rgba(111, 66, 193, 1);
+ }
+
+ .signInL {
+   padding: 16px 16px;
+   border: 1px solid #21262d;
+   text-align: center;
+   border-radius: 6px;
+   margin-top: 16px;
+   color: #E6EDF3;
+   font-size: 15px;
+ }

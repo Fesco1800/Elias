@@ -1,3 +1,8 @@
 textarea {
     min-height: 150px;
 }
+
+label {
+    color: #fff;
+}
+

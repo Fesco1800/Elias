@@ -17,15 +17,16 @@ function xss_filter($data) {
 
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-2" >
 
-            <?php include('../assets/layouts/profile-card.php'); ?>
+                <?php 
+                // include('../assets/layouts/profile-card.php'); 
+                ?>
 
         </div>
-        <div class="col-md-1">
-
-        </div>
-        <div class="col-lg-7">
+        
+        <div class="col-8" >
+            
             <form class="form-auth" action="includes/profile-edit.inc.php" method="post" enctype="multipart/form-data" autocomplete="off">
 
                 <?php insert_csrf_token(); ?>
@@ -38,7 +39,8 @@ function xss_filter($data) {
                         </div>
                         <div class="avatar-edit">
                             <input name='avatar' id="avatar" class="fas fa-pencil" type='file' />
-                            <label for="avatar"></label>
+
+                            <label for="avatar"><i class="bi bi-camera"></i></label>
                         </div>
                     </div>
                 </div>
@@ -61,11 +63,11 @@ function xss_filter($data) {
                     </small>
                 </div>
 
-                <h6 class="h3 mt-3 mb-3 font-weight-normal text-muted text-center">Edit Your Profile</h6>
+                <h6 class="h3 mt-3 mb-3 font-weight-normal text-muted text-center" style="color: #fff !important;">Edit Your Profile</h6>
 
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" class="form-control" placeholder="Username" value="<?php echo xss_filter($_SESSION['username']); ?>" autocomplete="off">
+                    <input type="text" id="username" name="username" class="form-control" placeholder="Username" value="<?php echo xss_filter($_SESSION['username']); ?>" autocomplete="off" style="border-radius: 2px; padding-left: 2px; ">
                     <sub class="text-danger">
                         <?php
                             if (isset($_SESSION['ERRORS']['usernameerror']))
@@ -77,7 +79,7 @@ function xss_filter($data) {
 
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Email address" value="<?php echo xss_filter($_SESSION['email']); ?>">
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email address" value="<?php echo xss_filter($_SESSION['email']); ?>" style="border-radius: 2px; padding-left: 2px; ">
                     <sub class="text-danger">
                         <?php
                             if (isset($_SESSION['ERRORS']['emailerror']))
@@ -89,22 +91,22 @@ function xss_filter($data) {
 
                 <div class="form-group">
                     <label for="first_name">First Name</label>
-                    <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name" value="<?php echo xss_filter($_SESSION['first_name']); ?>">
+                    <input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name" value="<?php echo xss_filter($_SESSION['first_name']); ?>" style="border-radius: 2px; padding-left: 2px; ">
                 </div>
 
                 <div class="form-group">
                     <label for="last_name">Last Name</label>
-                    <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Last Name" value="<?php echo xss_filter($_SESSION['last_name']); ?>">
+                    <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Last Name" value="<?php echo xss_filter($_SESSION['last_name']); ?>" style="border-radius: 2px; padding-left: 2px; ">
                 </div>
 
                 <div class="form-group mt-4">
                     <label for="headline">Headline</label>
-                    <input type="text" id="headline" name="headline" class="form-control" placeholder="headline" value="<?php echo xss_filter($_SESSION['headline']); ?>">
+                    <input type="text" id="headline" name="headline" class="form-control" placeholder="headline" value="<?php echo xss_filter($_SESSION['headline']); ?>" style="border-radius: 2px; padding-left: 2px; ">
                 </div>
 
                 <div class="form-group">
                     <label for="bio">Profile Details</label>
-                    <textarea type="text" id="bio" name="bio" class="form-control" placeholder="Tell us about yourself..."><?php echo xss_filter($_SESSION['bio']); ?></textarea>
+                    <textarea type="text" id="bio" name="bio" class="form-control" placeholder="Tell us about yourself..." style="border-radius: 2px; padding-left: 2px; "><?php echo xss_filter($_SESSION['bio']); ?></textarea>
                 </div>
 
                 <div class="form-group mb-5">
@@ -132,25 +134,26 @@ function xss_filter($data) {
                     <br><br>
 
                     <div class="form-group">
-                        <input type="password" id="password" name="password" class="form-control" placeholder="Current Password" autocomplete="new-password">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Current Password" autocomplete="new-password" style="border-radius: 2px; padding-left: 2px; ">
                     </div>
 
                     <div class=" form-group">
-                        <input type="password" id="newpassword" name="newpassword" class="form-control" placeholder="New Password" autocomplete="new-password">
+                        <input type="password" id="newpassword" name="newpassword" class="form-control" placeholder="New Password" autocomplete="new-password" style="border-radius: 2px; padding-left: 2px; ">
                     </div>
 
                     <div class=" form-group mb-5">
-                        <input type="password" id="confirmpassword" name="confirmpassword" class="form-control" placeholder="Confirm Password" autocomplete="new-password">
+                        <input type="password" id="confirmpassword" name="confirmpassword" class="form-control" placeholder="Confirm Password" autocomplete="new-password" style="border-radius: 2px; padding-left: 2px; ">
                     </div>
 
-                    <button class="btn btn-lg btn-primary btn-block mb-5" type="submit" name='update-profile'>Confirm Changes</button>
+                    <button class="btn btn-lg btn-primary btn-block mb-5" type="submit" name='update-profile' style="background: #6f42c1; border: none;">Confirm Changes</button>
                 
             </form>
 
         </div>
-        <div class="col-md-4">
 
-        </div>
+        <div class="col-2"></div>
+        
+        
     </div>
 </div>
 

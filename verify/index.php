@@ -12,7 +12,9 @@ check_logged_in_butnot_verified();
     <div class="row">
         <div class="col-sm-3">
 
-            <?php include('../assets/layouts/profile-card.php'); ?>
+            <?php 
+            // include('../assets/layouts/profile-card.php'); 
+            ?>
 
         </div>
         <div class="shadow-lg box-shadow col-sm-7 px-5 m-5 bg-light rounded align-self-center verify-message">
@@ -24,7 +26,7 @@ check_logged_in_butnot_verified();
                 <h5 class="text-center mb-5 text-primary">Verify Your Email Address</h5>
 
                 <p>
-                    Before proceeding, please check your email for a verification link. If you did not receive the email,
+                    Before proceeding, please check your email for a verification link (also check you spam messages). If you did not receive the email,
                     <button type="submit" name="verifysubmit">click here to send another</button>.
                 </p>
                 <br>

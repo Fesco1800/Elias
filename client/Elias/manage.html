@@ -1,0 +1,92 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="css/aliasing.css">
+  <link rel="stylesheet" type="text/css" href="css/alert.css">
+  <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="js/jquery-3.6.4.js"></script>
+
+  <style>
+
+    .sec {
+      margin-top: 1px;
+    }
+    
+    .alias-card {
+      border: 1px solid #ddd;
+    }
+    .container {
+      margin-top: 5px;
+    }
+    
+    .card-body {
+      border: 1px solid #fff;
+      padding: 5px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+    .card-body:hover {
+      background-color: rgba(242, 242, 242, 0.5);
+    }
+    .aclass {
+      text-align: center;
+    }
+
+    .bi-box-arrow-up-right {
+      background-color: transparent;
+    }
+
+
+
+  </style>
+</head>
+
+<body style="background: #0d1117; color: #fff;">
+
+  <div class="my-3 p-3 rounded box-shadow" id="extdiv" style="background: #0d1117;">
+    <div id="" class="sec">
+      <div class="section-center">
+        <div class="container col-10">
+          <h4 class="my-3" style="color: #fff; "><i class="bi bi-arrow-repeat"></i> Manage Aliases 
+            <button type="button" class="btn btn-secondary" id="gotobtn"> 
+              <a href="popup.html" style="color: #fff; text-decoration: none;">
+                Generate 
+                <i class="bi bi-arrow-left"></i>    
+              </a>
+            </button>
+          </h4>
+
+           <div class="alert info" id="notification-banner" style="display: none; position: fixed; top: 0; left: 0; width: 100%; text-align: center; z-index: 9999;">
+            <input type="checkbox" id="alert3" />
+            <label class="close" title="close" for="alert3">
+              <i class="icon-remove"></i>
+            </label>
+            <p class="inner" style="text-align: center;">
+              <span id="notification-message" class="message"></span>
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="container jscontainer">
+                <div class="card-columns" id="alias-cards" >
+                  <!-- Card columns will be dynamically generated here -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/management.js"></script>
+
+
+
+</body>
+
+

@@ -13,8 +13,11 @@ check_logged_out();
 
         </div>
         <div class="col-lg-4">
-
-            <form class="form-auth" action="includes/register.inc.php" method="post" enctype="multipart/form-data">
+            <div class="text-center" style="">
+                <img class="mb-1" src="../assets/images/eliaslogo.png" alt="" width="80" height="80">
+            </div>
+            <h1 class="h3 mt-3 mb-3 font-weight-normal text-muted text-center" style="color: #e6edf3 !important; font-size: 24px; margin-top: 10% !important;">Create your Elias Account</h1>
+            <form class="form-auth" action="includes/register.inc.php" method="post" enctype="multipart/form-data" style="border: 1px solid #21262d; border-radius: 6px; background: #161b22   ;">
 
                 <?php insert_csrf_token(); ?>
 
@@ -25,7 +28,7 @@ check_logged_out();
                         </div>
                         <div class="avatar-edit">
                             <input name='avatar' id="avatar" class="fas fa-pencil" type='file' />
-                            <label for="avatar"></label>
+                            <label for="avatar" style="color: #fff;"><i class="bi bi-camera"></i></label>
                         </div>
                     </div>
                 </div>
@@ -39,7 +42,7 @@ check_logged_out();
                     </sub>
                 </div>
 
-                <h6 class="h3 mt-3 mb-3 font-weight-normal text-muted text-center" style="color: #fff !important;">Create an Account</h6>
+                
 
                 <div class="text-center mb-3">
                     <small class="text-success font-weight-bold">
@@ -53,7 +56,7 @@ check_logged_out();
 
                 <div class="form-group">
                     <label for="username" class="sr-only">Username</label>
-                    <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+                    <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus style="border-radius: 2px; padding-left: 2px;">
                     <sub class="text-danger">
                         <?php
                             if (isset($_SESSION['ERRORS']['usernameerror']))
@@ -65,7 +68,7 @@ check_logged_out();
 
                 <div class="form-group">
                     <label for="email" class="sr-only">Email address</label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required autofocus>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required autofocus style="border-radius: 2px; padding-left: 2px;">
                     <sub class="text-danger">
                         <?php
                             if (isset($_SESSION['ERRORS']['emailerror']))
@@ -77,12 +80,12 @@ check_logged_out();
 
                 <div class="form-group">
                     <label for="password" class="sr-only">Password</label>
-                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required style="border-radius: 2px; padding-left: 2px;">
                 </div>
 
                 <div class="form-group mb-4">
                     <label for="confirmpassword" class="sr-only">Confirm Password</label>
-                    <input type="password" id="confirmpassword" name="confirmpassword" class="form-control" placeholder="Confirm Password" required>
+                    <input type="password" id="confirmpassword" name="confirmpassword" class="form-control" placeholder="Confirm Password" required style="border-radius: 2px; padding-left: 2px;">
                     <sub class="text-danger mb-4">
                         <?php
                             if (isset($_SESSION['ERRORS']['passworderror']))
@@ -93,7 +96,7 @@ check_logged_out();
                 </div>
 
                 <hr>
-                <span class="h5 mb-3 font-weight-normal text-muted text-center" style="color: #fff !important;">Optional</span>
+                <!-- <span class="h5 mb-3 font-weight-normal text-muted text-center" style="color: #fff !important;">Optional</span>
                 <br><br>
 
                 <div class="form-group">
@@ -127,21 +130,23 @@ check_logged_out();
                         <input type="radio" id="female" name="gender" class="custom-control-input" value="f">
                         <label class="custom-control-label" for="female">Female</label>
                     </div>
-                </div>
+                </div> -->
 
-                <button class="btn btn-lg btn-primary btn-block" type="submit" name='signupsubmit'>Signup</button>
+                <button class="btn btn-lg btn-primary btn-block" id="signUpBtn" type="submit" name='signupsubmit'>Signup</button>
 
-                <p class="mt-4 mb-3 text-muted text-center">
-                    <a href="https://github.com/msaad1999/PHP-Login-System" target="_blank">
-                        Login System
-                    </a> | 
-                    <a href="https://github.com/msaad1999/PHP-Login-System/blob/master/LICENSE" target="_blank">
-                        MIT License
-                    </a>
-                </p>
+                
 
             </form>
+            <p class="signInL" style="">Already a user? <a  href="../login" style=""> Signin to your account.</a></p>
 
+            <p class="mt-4 mb-3 text-muted text-center">
+                    <span >
+                        Elias
+                    </span> | 
+                    <span >
+                        2023
+                    </span>
+                </p>
         </div>
         <div class="col-md-4">
 

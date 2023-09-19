@@ -123,9 +123,6 @@ function force_login($email) {
 }
 
 function check_remember_me() {
-
-    
-
     require '../assets/setup/db.inc.php';
     
     if (empty($_SESSION['auth']) && !empty($_COOKIE['rememberme'])) {

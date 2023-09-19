@@ -48,12 +48,12 @@ if (isset($_POST['update-profile'])) {
             }
         }
     }
-    else{
+    // else{
 
-        $_SESSION['ERRORS']['passworderror'] = 'password fields cannot be empty for password updation';
-        header("Location: ../");
-        exit();
-    }  
+    //     $_SESSION['ERRORS']['passworderror'] = 'password fields cannot be empty for password updation';
+    //     header("Location: ../");
+    //     exit();
+    // }  
 } 
 else {
 

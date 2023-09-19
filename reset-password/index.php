@@ -61,17 +61,17 @@ check_logged_out();
                             <input type="password" id="confirmpassword" name="confirmpassword" class="form-control" placeholder="Confirm Password" autocomplete="new-password">
                         </div>
 
-                        <button class="btn btn-lg btn-primary btn-block mb-5 mt-4" type="submit" value="resetsubmit" name="resetsubmit">
+                        <button class="btn btn-lg btn-primary btn-block mb-5 mt-4 resendBtn" type="submit" value="resetsubmit" name="resetsubmit" style="background: #6f42c1; border: none;">
                             Reset Password
                         </button>
 
                         <p class="mt-4 mb-3 text-muted text-center">
-                            <a href="https://github.com/msaad1999/PHP-Login-System" target="_blank">
-                                Login System
-                            </a> | 
-                            <a href="https://github.com/msaad1999/PHP-Login-System/blob/master/LICENSE" target="_blank">
-                                MIT License
-                            </a>
+                            <span href="#" target="_blank">
+                                Elias
+                            </span> | 
+                            <span href="#" target="_blank">
+                                2023
+                            </span>
                         </p>
 
                     </form>
@@ -83,10 +83,10 @@ check_logged_out();
                         <?php insert_csrf_token(); ?>
 
                         <div class="text-center">
-                            <img class="mb-1" src="../assets/images/logo.png" alt="" width="130" height="130">
+                            <img class="mb-1" src="../assets/images/eliaslogo.png" alt="" width="130" height="130">
                         </div>
 
-                        <h6 class="h5 mb-3 font-weight-normal text-muted text-center">Reset password</h6>
+                        <h6 class="h5 mb-3 font-weight-normal text-muted text-center" style="color: #fff !important;">Reset password</h6>
 
                         <div class="text-center mb-3">
                             <small class="text-success font-weight-bold">
@@ -109,17 +109,17 @@ check_logged_out();
                             </sub>
                         </div>
 
-                        <button class="btn btn-lg btn-primary btn-block mb-5 mt-4" type="submit" value="resentsend" name="resentsend">
+                        <button class="btn btn-lg btn-primary btn-block mb-5 mt-4 resendBtn" type="submit" value="resentsend" name="resentsend" style="background: #6f42c1; border: none;">
                             Send Password Reset Link
                         </button>
 
                         <p class="mt-4 mb-3 text-muted text-center">
-                            <a href="https://github.com/msaad1999/PHP-Login-System" target="_blank">
-                                Login System
-                            </a> | 
-                            <a href="https://github.com/msaad1999/PHP-Login-System/blob/master/LICENSE" target="_blank">
-                                MIT License
-                            </a>
+                            <span href="#" target="_blank">
+                                Elias
+                            </span> | 
+                            <span href="#" target="_blank">
+                                2023
+                            </span>
                         </p>
 
                     </form>

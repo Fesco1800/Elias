@@ -48,7 +48,7 @@ check_verified();
     </div>
 </div>
 
-<div class="row bio">
+<div class="row bio" style="color: #fff;">
 
     <div class="col-xl-6 col-md-9 col-sm-12 mx-auto">
     

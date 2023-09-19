@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Alias Generator",
+  "version": "1.0",
+  "description": "Generates aliases for your personal information",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "action": {
+    "default_icon": "icons/128.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "scripting",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentscript.js", "js/recontentscript.js"]
+    }
+  ]
+  
+}

@@ -1,0 +1,26 @@
+ .btn-primary {
+ 	background: rgba(111, 66, 193, 0.75) !important;
+    border-color: rgba(111, 66, 193, 1);
+
+ }
+
+ #loginbtn:hover {
+    background: rgba(111, 66, 193, 1) !important;
+    border-color: rgba(111, 66, 193, 1);
+ }
+
+ #loginbtn{
+   font-size: 14px;
+   border-radius: 2px;
+ }
+
+
+ .signUpL {
+   padding: 16px 16px;
+   border: 1px solid #21262d;
+   text-align: center;
+   border-radius: 6px;
+   margin-top: 16px;
+   color: #E6EDF3;
+   font-size: 15px;
+ }

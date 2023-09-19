@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Elias</title>
+
+<link rel="stylesheet" type="text/css" href="css/aliasing.css">
+<link rel="stylesheet" type="text/css" href="css/alert.css">
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<script src="js/jquery-3.6.4.js"></script>
+</head>
+<body style="background: #161b22;">
+
+<div class="my-3 p-3 rounded box-shadow" id="extdiv" style="background: #161b22">
+        <div id="booking" class="section">
+          <div class="section-center">
+            <div class="container col-10" style="background: #161b22;">
+              <h4 class="my-3" style="color: #fff; "><i class="bi bi-arrow-repeat" ></i> Generate Aliases
+                <button type="button" title="click to view created aliases" class="btn btn-secondary" id="gotobtn"> 
+                  <a href="manage.html" style="color: #fff; text-decoration: none;">
+                    Manage 
+                    <i class="bi bi-arrow-right"></i>    
+                  </a>
+                </button>
+              </h4>
+              <div class="row" style="background: #161b22;">
+                <button  id="generateAllBtn" title="click to generate aliases instantly"
+                style=" color: #fff; background: transparent;  float: right;  margin-top: 20px; margin-right: 30px; padding: 9px 13px 9px 13px ; border: 1px solid #fff; border-radius: 6px;" 
+                ><i class="bi bi-lightning-fill"></i></button>
+              </div>
+              
+
+              <div class="row">
+                
+
+                <div class="booking-form">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <div class="form-btn">
+                        
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="row">
+
+                    <div class="col-md-6">
+                       <span class="form-label" for="username">Username:</span>
+                      <div class="form-group" style="display: flex; align-items: center;">
+                        <!-- <div id="notification-banner" class="notification-banner" style="position: fixed; top: 0; left: 0; width: 100%; text-align: center; color: #fff;"> -->
+                          
+
+                          <div class="alert info" id="notification-banner" style="display: none; position: fixed; top: 0; left: 0; width: 100%; text-align: center; z-index: 9999;">
+                            <input type="checkbox" id="alert3" />
+                            <label class="close" title="close" for="alert3">
+                              <i class="icon-remove" style="font-size: 17px;"></i>
+                            </label>
+                            <p class="inner" style="text-align: center;">
+                              <span id="notification-message" class="message"></span>
+                            </p>
+                          </div>
+
+                        <!-- </div> -->
+
+
+                        <!-- <form action="./controllers/aliasingController.php" method="post" style="color: #fff;"> -->
+                          <input type="number" value="1" name="num_aliases" id="num_aliases" min="1" max="1" required style="display: none;">
+
+                         
+                          <input class="form-control" type="text" name="username" id="username" value="" placeholder="Username" required  style="padding: 2px;">
+                          <button type="button" title="click to generate random username" class="btn btn-primary btn-sm" id="usernameBtn"
+                                   style="float: right;
+                                  border-radius: 2px;
+                                  font-size: 20px;
+                                  background: none;
+                                  border: none;
+                                  "
+                                  >
+                              <i class="bi bi-arrow-repeat"></i>
+                          </button>
+
+                            <div class="form-group" style="float: left; display: none;">
+                              <div class="form-checkbox">
+                                <label for="roundtrip">
+                                  <input type="radio" id="roundtrip" name="flight-type" >
+                                  <span></span>With space
+                                </label>
+                                <label for="one-way">
+                                  <input type="radio" id="one-way" name="flight-type">
+                                  <span></span>Without space
+                                </label>
+                              </div>
+                            </div>
+                        <!-- </form> --> 
+
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+
+                      <span class="form-label">Password</span>
+                      <div class="form-group" style="display: flex;">
+                        <div style="position: relative; flex-grow: 1;">
+                          <input class="form-control" type="password" name="password" placeholder="Password" id="password-input" required style="padding: 2px;">
+                          <button class="btn btn-primary btn-sm" title="click to view password" id="togglePasswordBtn" style="position: absolute; top: 40%; right: 10px; transform: translateY(-50%); border-radius: 6px; font-size: 20px; background: none; border: none;  ">
+                            <i class="bi bi-eye" id="togglePasswordIcon" style="color: #e6edf3;"></i>
+                          </button>
+                        </div>
+                        <button class="btn btn-primary btn-sm" title="click to generate random password" name="generate_password" type="submit" id="passwordBtn" style="float: right;
+                                  border-radius: 2px;
+                                  font-size: 20px;
+                                  background: none;
+                                  border: none;
+                                  ">
+                           <i class="bi bi-arrow-repeat"></i>
+                        </button>
+                      </div>
+
+                      
+                    </div>
+                    
+                    <div class="col-md-6" >
+                      <span class="form-label">Email</span>
+                      <div class="form-group" style="display: flex; align-items: center; margin-bottom: 0px;">
+                        <div style="width: 100%; ">
+                            <input class="form-control" type="text" name="email" id="email" placeholder="Email" style="padding: 2px; ">
+                             <a href="" style=" float: right;" id="useEmailLink">Use my Email</a>
+                        </div>
+                        <!-- <input class="form-control" type="text" name="email" id="email" placeholder="Email" style="padding: 2px; "> -->
+                        
+                        <button type="button" title="click to generate random email" class="btn btn-primary btn-sm" id="emailBtn"
+                                  style="float: right;
+                                  border-radius: 2px;
+                                  font-size: 20px;
+                                  background: none;
+                                  border: none;
+                                  "
+                                  >
+                              <i class="bi bi-arrow-repeat"></i>
+                        </button>
+                      </div>
+                     
+                      
+                    </div>
+
+                    <div class="col-md-6">
+
+                      <span class="form-label">Phone</span>
+                      <div class="form-group" style="display: flex; align-items: center;">
+                        
+                        <input class="form-control" type="text" name="phone" id="phone" value="" placeholder="Phone" required style="padding: 2px;">
+                        <button type="button" title="click to generate random phone number" class="btn btn-primary btn-sm" id="phoneBtn"
+                                  style="float: right;
+                                  border-radius: 6px;
+                                  font-size: 20px;
+                                  background: none;
+                                  border: none;
+                                  "
+                                  >
+                              <i class="bi bi-arrow-repeat"></i>
+                        </button>
+                      </div>
+                      
+                    </div>
+
+
+                    <div class="col-md-6">
+                      <span class="form-label">Firstname</span>
+                      <div class="form-group" style="display: flex; align-items: center;">
+                        
+                        <input class="form-control" type="text" placeholder="Firstname" id="firstname" value="" required style="padding: 2px;">
+                        <button class="btn btn-primary btn-sm" title="click to generate random firstname" id="firstnameBtn" type="button" style="float: right;
+                                  border-radius: 6px;
+                                  font-size: 20px;
+                                  background: none;
+                                  border: none;
+                                  ">
+                          <i class="bi bi-arrow-repeat"></i>
+                        </button>
+                      </div>
+                  </div>
+                    <div class="col-md-6">
+                      <span class="form-label">Middlename</span>
+                      <div class="form-group" style="display: flex; align-items: center;">
+                        
+                        <input class="form-control" type="text" placeholder="Middlename" id="middlename" required style="padding: 2px;">
+                        <button class="btn btn-primary btn-sm " title="click to generate random middlename" id="middlenameBtn" type="button" style="float: right;
+                                  border-radius: 6px;
+                                  font-size: 20px;
+                                  background: none;
+                                  border: none;
+                                  ">
+                                  <i class="bi bi-arrow-repeat"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <span class="form-label">Lastname</span>
+                      <div class="form-group" style="display: flex; align-items: center;">
+                        
+                        <input class="form-control" type="text" placeholder="Lastname" id="lastname" value="" required style="padding: 2px;">
+                        <button class="btn btn-primary btn-sm " title="click to generate random lastname" id="lastnameBtn" type="button" style="float: right;
+                                  border-radius: 6px;
+                                  font-size: 20px;
+                                  background: none;
+                                  border: none;
+                                  ">
+                          <i class="bi bi-arrow-repeat"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <span class="form-label">Birthdate</span>
+                      <div class="form-group" style="display: flex; align-items: center;">
+                        
+                        <input class="form-control" type="date" id="birthdate" required style="padding: 2px;">
+                        <button class="btn btn-primary btn-sm " title="click to generate random birthdate" id="birthdateBtn" type="button" style="float: right;
+                                  border-radius: 6px;
+                                  font-size: 20px;
+                                  background: none;
+                                  border: none;
+                                  ">
+                          <i class="bi bi-arrow-repeat"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <span class="form-label">Address</span>
+                      <div class="form-group" style="display: flex; align-items: center;">
+                        
+                        <input class="form-control" type="text" placeholder="Address" id="address" required style="padding: 2px;">
+                        <button class="btn btn-primary btn-sm " title="click to generate random address" id="addressBtn" type="button" style="float: right;
+                                  border-radius: 6px;
+                                  font-size: 20px;
+                                  background: none;
+                                  border: none;
+                                  ">
+                          <i class="bi bi-arrow-repeat"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <span class="form-label">URL</span>
+                        <input class="form-control" type="text" placeholder="URL" id="url" required style="padding: 2px;">
+                        <!-- <button class="btn btn-primary btn-sm " id="addressBtn" type="button" style="float: right;
+                            border-radius: 40px;
+                            background: purple !important;
+                            border-color: purple;">
+                          <i class="bi bi-arrow-repeat"></i>
+                        </button> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3" style="margin-right: 5px;">
+                      <div class="form-btn">
+                        <button class="submit-btn" title="click to save generated aliases" id="save" style="float: left;"><i class="bi bi-save"></i> Save</button>
+                      </div>
+
+                    </div>
+                    <div class="col-md-3">
+                      <div class="form-btn">
+                        <button class="submit-btn" title="click to autofill the text fields" id="autofill" style="float: right;"><i class="bi bi-pen"></i> Autofill</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="form-btn">
+                        <button id="refreshBtn" class="submit-btn" title="click to clear the form" style="margin-top: 3px;">
+                          <i class="bi bi-arrow-clockwise"></i>
+                          Refresh 
+                          
+                        </button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+<script src="popup.js"></script>
+<</body>
+
+</html>
