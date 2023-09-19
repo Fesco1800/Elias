@@ -2,10 +2,21 @@
   <img src="assets/images/eliaslogo1.png" width="350" align="center"/>
 </p><br>
 
-## Welcome to Elias (A Personal Aliasing Management System) ##
+## Welcome to Elias  ##
+> (A Personal Aliasing Management System)
 
 ## SAMPLE DATABASE ##
 [Download eliasdb.sql](/eliasdb.sql)
+
+### Existing Account(s)
+The database already contains a sample account to test things out with. Use that or head over to the signup page and start making new accounts.
+
+```php
+// credentials for existing account
+
+username: supahot
+password: aaaaaa
+```
 
 ## Generate Random Aliases ##
 
@@ -85,21 +96,21 @@ The Alias Management feature simplifies the organization and control of generate
 * JQuery 
 
 ### Installation
-1. Import the file `assets/setup/DBcreation.sql` into the current DBMS. The dump file also creates the database (named `klik_loginsystem`), so no prior action is needed. If database name needs to be updated, change it in the dump file where the database title is declared.
+1. Import the file `assets/setup/DBcreation.sql` into the current DBMS. The dump file also creates the database (named `eliasdb`), so no prior action is needed. If database name needs to be updated, change it in the dump file where the database title is declared.
 
 2. Edit the file `assets/setup/env.php` and setup the Application information, Database connection and SMTP server. Port value is usually not needed in Database connections, so only edit if you know what you are doing. The email server (and the connected email account) will be used to send confirmation, validation and notification emails. 
 
 ```php
 // env.php
 
-if (!defined('APP_NAME'))                       define('APP_NAME', 'Login System');
-if (!defined('APP_ORGANIZATION'))               define('APP_ORGANIZATION', 'KLiK');
-if (!defined('APP_OWNER'))                      define('APP_OWNER', 'msaad1999');
-if (!defined('APP_DESCRIPTION'))                define('APP_DESCRIPTION', 'Embeddable PHP Login System');
+if (!defined('APP_NAME'))                       define('APP_NAME', 'Elias');
+if (!defined('APP_ORGANIZATION'))               define('APP_ORGANIZATION', 'Elias');
+if (!defined('APP_OWNER'))                      define('APP_OWNER', 'esco');
+if (!defined('APP_DESCRIPTION'))                define('APP_DESCRIPTION', 'Personal Information Aliasing Management System');
 
 if (!defined('ALLOWED_INACTIVITY_TIME'))        define('ALLOWED_INACTIVITY_TIME', time()+1*60);
 
-if (!defined('DB_DATABASE'))                    define('DB_DATABASE', 'klik_loginsystem');
+if (!defined('DB_DATABASE'))                    define('DB_DATABASE', 'eliasdb');
 if (!defined('DB_HOST'))                        define('DB_HOST','127.0.0.1');
 if (!defined('DB_USERNAME'))                    define('DB_USERNAME','root');
 if (!defined('DB_PASSWORD'))                    define('DB_PASSWORD' ,'');
@@ -112,15 +123,7 @@ if (!defined('MAIL_ENCRYPTION'))                define('MAIL_ENCRYPTION', 'ssl')
 if (!defined('MAIL_PORT'))                      define('MAIL_PORT', 465);
 ```
 
-### Existing Account(s)
-The database already contains a sample account to test things out with. Use that or head over to the signup page and start making new accounts.
 
-```php
-// credentials for existing account
-
-username: supahot
-password: aaaaaa
-```
 
 ### Project File Structure
 
@@ -408,8 +411,3 @@ If you want to contribute to this project, please refer to the [Contributing Gui
 
 This project has been assigned the [MIT License](LICENSE), so go ahead and feel free to use any and/or all parts of this system and to build on it. Although I would still insist that if you do end up improving this, do accidentally contribute, it would be an honour.
 
-## Personal Note
-
-Hey there, this was a small little side project, which was a great learning experience for me and influenced me to focus more on bigger, more complex frameworks. I have now moved on to Laravel development, and if you think you're adding too much to this or any other raw PHP system, it may be high time for you to move onto a better framework like Laravel as well.
-
-> As mentioned before, in case that you do actually appreciate this project or the effort put into it, you're probably too far away for me to demand a good cup of coffee, so for now, how about a star? And if you're feeling great, how about a contribution?
