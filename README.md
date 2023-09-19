@@ -1,11 +1,29 @@
-## SAMPLE DATABASE ##
-[Download eliasdb.sql](/eliasdb.sql)
-
 <p align="center">
   <img src="assets/images/eliaslogo1.png" width="350" align="center"/>
 </p><br>
 
-> Embeddable and Highly Secure PHP Authentication System with Login, Signup, User Profiles, Profile Editing, Account Verification via Email, Password Reset System, Remember Me Feature, Automatic Logout on Inactivity,  Global ERROR & STATUS variable system, Authentication checks and more.
+## Welcome to Elias (A Personal Aliasing Management System) ##
+
+## SAMPLE DATABASE ##
+[Download eliasdb.sql](/eliasdb.sql)
+
+## Generate Random Aliases ##
+
+The Alias Generation feature generates unique and random information for users, including a username, password, email, phone number, first name, middle name, last name, address, and birthdate. This feature provides users with a convenient way to quickly create realistic and unique identities for various purposes, such as online registrations or form filling. By generating this diverse set of information, users can ensure privacy, protect their personal data, and maintain security while engaging in various online activities.
+
+## Alias Management System ##
+
+The Alias Management feature simplifies the organization and control of generated aliases. Users can easily view, edit, and delete aliases, allowing efficient management of multiple identities. The feature provides a centralized interface for accessing and controlling alias information, ensuring convenient tracking and maintenance of aliases. With search, filter, and secure storage capabilities, users can effectively manage their aliases, enhancing privacy and security.
+
+## Browser Extension ##
+
+Download the extension folder from: [client/Elias]
+Open Google Chrome and go to: chrome://extensions
+Enable Developer Mode by toggling the switch at the top right corner.
+Click on "Load unpacked" and select the Elias extension folder you downloaded.
+The Elias Browser Extension is now installed and ready to use!
+
+> Highly Secure PHP Authentication System with Login, Signup, User Profiles, Profile Editing, Account Verification via Email, Password Reset System, Remember Me Feature, Automatic Logout on Inactivity,  Global ERROR & STATUS variable system, Authentication checks and more.
 
 # Table of Contents
 
