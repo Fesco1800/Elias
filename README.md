@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/images/eliaslogo1.png" width="350" align="center"/>
+  <img src="assets/images/eliaslogo.png" width="350" align="center"/>
 </p><br>
 
 ## Welcome to Elias  ##
